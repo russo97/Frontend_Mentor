@@ -1,12 +1,28 @@
 (function () {
 
+  const $ = document.querySelector.bind(document);
 
-  const btnHamburger = document.querySelector('#btnHamburger');
+  const [header, overlay, btnHamburger] = [
+    '.header', '.overlay', '#btnHamburger'
+  ].map($);
+
+  const toggleClasses = [{
+    addIf: true, className: 'fade-in'
+  }, {
+    addIf: false, className: 'fade-out'
+  }];
 
 
-  btnHamburger.addEventListener('click', e => {
-    btnHamburger.classList.toggle('open');
-  })
+  function toggleMenuAndOverlayBox () {
+    header.classList.toggle('open');
+
+    let headerHasOpenClass = header.classList.contains('open');
+
+    toggleClasses.forEach(({ className, addIf }) => {
+      overlay.classList.toggle(className, headerHasOpenClass == addIf);
+    });
+  }
 
 
+  btnHamburger.addEventListener('click', toggleMenuAndOverlayBox, false);
 })();

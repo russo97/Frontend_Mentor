@@ -2,6 +2,38 @@
 
 .header {
 
+  &.open {
+
+    .overlay {
+    }
+
+    .header__menu {
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+
+    }
+
+  }
+
+  .overlay {
+    top: 3.75rem;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    background-image: linear-gradient(to bottom, $darkBlue, transparent);
+  }
+
   nav {
     padding: 1.0625rem 1.5rem;
   }
@@ -28,22 +60,6 @@
       &:not(:last-child) {
         margin-bottom: 5px;
       }
-    }
-
-    &.open {
-
-      > span:nth-child(2) {
-        opacity: 0;
-      }
-
-      > span:first-child {
-        transform: rotate(45deg);
-      }
-
-      > span:last-child {
-        transform: rotate(-45deg);
-      }
-
     }
 
   }
@@ -97,4 +113,3 @@
   }
 
 }
-
