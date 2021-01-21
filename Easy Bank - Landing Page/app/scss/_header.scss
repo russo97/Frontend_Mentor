@@ -18,14 +18,32 @@
   &__menu { // mobile menu
 
     > span {
-      display: block;
       width: 26px;
       height: 2px;
+      display: block;
       background-color: $darkBlue;
+      transition: all .2s ease-in-out;
+      transform-origin: 0.1875rem center;
 
       &:not(:last-child) {
-        margin-bottom: 3px;
+        margin-bottom: 5px;
       }
+    }
+
+    &.open {
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+
     }
 
   }
@@ -44,13 +62,13 @@
 
       &::before {
         content: '';
-        width: 100%;
-        height: 5px;
-        position: absolute;
         left: 0px;
         right: 0px;
         opacity: 0;
+        width: 100%;
+        height: 5px;
         bottom: -25px;
+        position: absolute;
         transition: all .2s ease-in-out;
         background: linear-gradient(to left, $limeGreen, $brightCyan);
       }
