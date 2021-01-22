@@ -4,10 +4,7 @@
 
   &.open {
 
-    .overlay {
-    }
-
-    .header__menu {
+    .header__toggle {
 
       > span:nth-child(2) {
         opacity: 0;
@@ -23,6 +20,11 @@
 
     }
 
+    .header__menu {
+      margin-top: 1.5rem;
+      visibility: visible;
+    }
+
   }
 
   .overlay {
@@ -35,7 +37,8 @@
   }
 
   nav {
-    padding: 1.0625rem 1.5rem;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
   }
 
   &__logo {
@@ -47,7 +50,7 @@
 
   }
 
-  &__menu { // mobile menu
+  &__toggle { // mobile menu
 
     > span {
       width: 26px;
@@ -110,6 +113,27 @@
     &:hover {
       opacity: .75;
     }
+  }
+
+
+  &__menu {
+    width: calc(100% - 3rem);
+    padding: 1.625rem;
+    border-radius: 4px;
+    margin-top: 3.5rem;
+    left: 50%;
+    position: absolute;
+    background-color: $white;
+    transform: translateX(-50%);
+    transition: all .2s ease-in-out;
+
+    a {
+      display: block;
+      color: $darkBlue;
+      padding: .625rem;
+      text-align: center;
+    }
+
   }
 
 }
