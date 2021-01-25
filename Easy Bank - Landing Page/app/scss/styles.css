@@ -81,8 +81,11 @@ html {
 *,
 *::after,
 *::before {
+  outline: 0 none;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
 
 body {
@@ -95,6 +98,16 @@ body {
   font-family: 'Public Sans', sans-serif;
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
 a,
 a:hover,
 a:visited {
@@ -104,6 +117,11 @@ a:visited {
 .container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.container.vertical_container {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
 }
 
 .flex {
@@ -138,9 +156,18 @@ button,
   outline: 0 none;
   font-weight: 700;
   border-radius: 50px;
+  font-size: 0.875rem;
+  display: inline-block;
   padding: .875rem 2.1875rem;
+  -webkit-transition: opacity .1s ease-in-out;
+  transition: opacity .1s ease-in-out;
   background-image: -webkit-gradient(linear, right top, left top, from(#31d35c), to(#2bb7da));
   background-image: linear-gradient(to left, #31d35c, #2bb7da);
+}
+
+button:hover,
+.button:hover {
+  opacity: .75;
 }
 
 @media (max-width: 63.9375em) {
@@ -245,17 +272,6 @@ button,
   bottom: -30px;
 }
 
-.header__cta {
-  color: white;
-  font-size: 0.875rem;
-  -webkit-transition: opacity .1s ease-in-out;
-  transition: opacity .1s ease-in-out;
-}
-
-.header__cta:hover {
-  opacity: .75;
-}
-
 .header__menu {
   width: calc(100% - 3rem);
   padding: 1.625rem;
@@ -275,5 +291,42 @@ button,
   color: #2d314d;
   padding: .625rem;
   text-align: center;
+}
+
+.hero__image {
+  position: relative;
+  min-height: 17.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/images/bg-intro-mobile.svg");
+}
+
+.hero__image:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center calc(100% + 20px);
+  background-image: url("/images/image-mockups.png");
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__text h1 {
+  color: #2d314d;
+  font-weight: 300;
+  line-height: 1.15;
+  font-size: 2.3125rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__text p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
 }
 /*# sourceMappingURL=styles.css.map */
