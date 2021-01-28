@@ -1,0 +1,43 @@
+
+.articles {
+  background-color: $veryLightGray;
+}
+
+.article {
+
+  &__content {}
+
+  &__grid {
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    border: solid 1px red;
+  }
+
+  &__image {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__text {}
+
+  &__author {}
+
+  &__title {}
+
+  &__description {}
+
+}
