@@ -501,9 +501,28 @@ button:hover::before, .button:hover::before {
   }
 }
 
+.feature {
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+@media (min-width: 64em) {
+  .feature {
+    text-align: left;
+  }
+}
+
+.feature__intro {
+  margin-bottom: 3.75rem;
+}
+
+.feature__intro p {
+  font-size: .9375rem;
+}
+
 @media (min-width: 64em) {
   .feature__intro {
-    width: 55%;
+    width: 60%;
   }
 }
 
@@ -519,7 +538,6 @@ button:hover::before, .button:hover::before {
 
 .feature__item {
   padding: .9375rem;
-  border: solid 1px red;
 }
 
 @media (min-width: 40em) {
@@ -536,5 +554,35 @@ button:hover::before, .button:hover::before {
         -ms-flex: 1;
             flex: 1;
   }
+}
+
+.feature__icon {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 64em) {
+  .feature__icon {
+    margin-bottom: 2.75rem;
+  }
+}
+
+.feature__title {
+  color: #2d314d;
+  font-weight: 300;
+  line-height: 1.15;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  .feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.feature__description {
+  line-height: 1.5;
+  font-size: .875rem;
 }
 /*# sourceMappingURL=styles.css.map */
