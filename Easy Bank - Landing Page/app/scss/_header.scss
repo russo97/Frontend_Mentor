@@ -20,10 +20,10 @@
       }
     }
 
-    .header__menu.has_fade {
+    .header__menu {
+      opacity: 1;
       margin-top: 1.5rem;
-      opacity: 1 !important;
-      visibility: visible !important;
+      visibility: visible;
     }
   }
 
@@ -70,15 +70,18 @@
   }
 
   &__menu {
+    left: 50%;
+    opacity: 0;
     z-index: 15;
     position: absolute;
     width: calc(100% - 3rem);
-    left: 50%;
     transform: translateX(-50%);
     background: $white;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     padding: 1.625rem;
     border-radius: 5px;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
 
     a {
       display: block;

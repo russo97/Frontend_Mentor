@@ -13,7 +13,9 @@
   }];
 
 
-  function toggleMenuAndOverlayBox () {
+  function toggleMenuAndOverlayBox (e) {
+    e.preventDefault();
+
     header.classList.toggle('open');
 
     let headerHasOpenClass = header.classList.contains('open');
