@@ -8,7 +8,7 @@
   }
 
   &__intro {
-    margin-bottom: 3.75rem;
+    margin: 0 0 3.75rem;
 
     p {
       font-size: .9375rem;
@@ -39,10 +39,10 @@
   }
 
   &__icon {
-    margin-bottom: 1.875rem;
+    margin: 0 0 1.875rem;
 
     @include breakpoint-up(large) {
-      margin-bottom: 2.75rem;
+      margin: 0 0 2.75rem;
     }
   }
 
@@ -51,11 +51,11 @@
     font-weight: 300;
     line-height: 1.15;
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
 
     @include breakpoint-up(large) {
       font-size: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin: 0 0 1.5rem;
     }
   }
 

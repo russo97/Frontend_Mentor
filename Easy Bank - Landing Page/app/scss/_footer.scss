@@ -100,7 +100,7 @@
 
   &__copyright {
     font-size: .8125rem;
-    margin-top: 1.875rem;
+    margin: 1.875rem 0 0;
 
     @include breakpoint-up(large) {
       margin: 0;
